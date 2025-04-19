@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet ID Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <script>
+    const id = new URLSearchParams(window.location.search).get("id")
+
+    fetch("pets.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const pet = data[id]
+        if (!pet) {
+          document.body.innerHTML =
+            "<h2 class='text-center text-2xl text-red-600 mt-10'>Pet not found</h2>"
+          return
+        }
+
+        document.getElementById("petImage").src = pet.petImage
+        document.getElementById("ownerImage").src = pet.ownerImage
+
+        document.getElementById(
+          "petName"
+        ).innerHTML = `<b>Name:</b> ${pet.name} / ${pet.hindiName}`
+        document.getElementById(
+          "dob"
+        ).innerHTML = `<b>Date of Birth:</b> ${pet.dob} / जन्म तिथि: ${pet.hindiDob}`
+        document.getElementById(
+          "gender"
+        ).innerHTML = `<b>Gender:</b> ${pet.gender} / लिंग: ${pet.hindiGender}`
+        document.getElementById(
+          "color"
+        ).innerHTML = `<b>Color:</b> ${pet.color} / रंग: ${pet.hindiColor}`
+      })
+  </script>
+
+  <body class="bg-gray-100 p-4 font-sans scroll-smooth">
+    <!-- Header -->
+    <header
+      class="bg-white shadow-sm p-2 flex justify-between items-center rounded-md mb-6"
+    >
+      <div class="flex items-center gap-3">
+        <img src="assets/company-logo.png" alt="Logo" class="h-10 w-auto" />
+      </div>
+      <nav class="space-x-4 text-sm font-medium">
+        <a href="#" class="text-gray-600 hover:text-black">Home</a>
+        <a href="#footer" class="text-gray-600 hover:text-black">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- Pet ID Card - Front -->
+    <div
+      class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center md:items-start mb-10 relative"
+    >
+      <!-- Emblem and Title -->
+      <div
+        class="absolute top-4 left-1/2 transform -translate-x-1/2 text-center"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg"
+          alt="Emblem"
+          class="w-12 h-12 mx-auto"
+        />
+        <p class="text-sm font-semibold text-gray-700">Government of India</p>
+      </div>
+
+      <!-- Left: Pet Photo -->
+      <div class="w-full md:w-1/4 text-center mt-20">
+        <img
+          id="petImage"
+          src=""
+          alt="Pet Photo"
+          class="rounded-md border-2 border-gray-300 w-40 h-40 object-cover mx-auto"
+        />
+
+        <p class="mt-2 text-sm font-medium text-gray-600">Pet Photo</p>
+      </div>
+
+      <!-- Center: Pet Details -->
+      <div class="w-full md:w-2/4 px-6 text-center md:text-left mt-6 md:mt-20">
+        <p id="petName" class="text-md text-gray-700"></p>
+        <p id="dob" class="text-md text-gray-700"></p>
+        <p id="gender" class="text-md text-gray-700"></p>
+        <p id="color" class="text-md text-gray-700"></p>
+        <p class="mt-4 italic text-gray-500">
+          This card is generated for identification purpose only
+        </p>
+      </div>
+
+      <!-- Right: Owner Photo -->
+      <div class="w-full md:w-1/4 text-center mt-20">
+        <img
+          id="ownerImage"
+          src=""
+          alt="Owner Photo"
+          class="rounded-md border-2 border-gray-300 w-40 h-40 object-cover mx-auto"
+        />
+
+        <p class="mt-2 text-sm font-medium text-gray-600">Parent Photo</p>
+      </div>
+    </div>
+
+    <!-- Pet ID Card - Back -->
+    <div
+      class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 text-center"
+    >
+      <h2 class="text-lg font-bold text-gray-800 mb-4">
+        Pet Identification Authority
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <p class="text-md text-gray-700">
+            <b>Address (Hindi):</b><br />
+            १२३, एमजी रोड, दिल्ली
+          </p>
+        </div>
+        <div>
+          <p class="text-md text-gray-700">
+            <b>Address (English):</b><br />
+            123, MG Road, Delhi
+          </p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <p class="text-md text-gray-700">
+          <b>Latest Vaccination Details:</b><br />
+          Rabies - 03 March 2025
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      id="footer"
+      class="text-center text-sm text-gray-600 mt-10 pt-4 border-t"
+    >
+      <p>
+        For more details related to pet registration, contact the free service
+        helpline: <b>1800-123-4567</b>
+      </p>
+    </footer>
+  </body>
+</html>

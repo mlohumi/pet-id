@@ -1,0 +1,67 @@
+{
+  "101": {
+    "name": "Bella",
+    "hindiName": "बेला",
+    "dob": "01-Jan-2021",
+    "hindiDob": "०१-जनवरी-२०२१",
+    "gender": "Female",
+    "hindiGender": "फीमेल",
+    "color": "Golden",
+    "hindiColor": "गोल्डन",
+    "owner": "Priya Sharma",
+    "petImage": "https://placedog.net/300?id=1",
+    "ownerImage": "https://cdn-icons-png.flaticon.com/512/147/147144.png"
+  },
+  "102": {
+    "name": "Simba",
+    "hindiName": "सिम्बा",
+    "dob": "15-Mar-2022",
+    "hindiDob": "१५-मार्च-२०२२",
+    "gender": "Male",
+    "hindiGender": "मेल",
+    "color": "Black",
+    "hindiColor": "काला",
+    "owner": "Ravi Mehta",
+    "petImage": "https://placedog.net/300?id=2",
+    "ownerImage": "https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
+  },
+  "103": {
+    "name": "Lucy",
+    "hindiName": "लूसी",
+    "dob": "20-May-2020",
+    "hindiDob": "२०-मई-२०२०",
+    "gender": "Female",
+    "hindiGender": "फीमेल",
+    "color": "Brown",
+    "hindiColor": "भूरा",
+    "owner": "Anita Desai",
+    "petImage": "https://placedog.net/300?id=3",
+    "ownerImage": "https://cdn-icons-png.flaticon.com/512/2922/2922656.png"
+  },
+  "104": {
+    "name": "Rocky",
+    "hindiName": "रॉकी",
+    "dob": "05-Aug-2019",
+    "hindiDob": "०५-अगस्त-२०१९",
+    "gender": "Male",
+    "hindiGender": "मेल",
+    "color": "White",
+    "hindiColor": "सफेद",
+    "owner": "Sohan Kumar",
+    "petImage": "https://placedog.net/300?id=4",
+    "ownerImage": "https://cdn-icons-png.flaticon.com/512/147/147133.png"
+  },
+  "105": {
+    "name": "Tuffy",
+    "hindiName": "टफी",
+    "dob": "10-Oct-2021",
+    "hindiDob": "१०-अक्टूबर-२०२१",
+    "gender": "Male",
+    "hindiGender": "मेल",
+    "color": "Gray",
+    "hindiColor": "स्लेटी",
+    "owner": "Reena Varma",
+    "petImage": "https://placedog.net/300?id=5",
+    "ownerImage": "https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
+  }
+}
